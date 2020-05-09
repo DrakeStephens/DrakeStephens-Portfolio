@@ -1,6 +1,67 @@
 /* Over Arching Rules */
+:root {
+    --primary-color: #B51F48;
+    --secondary-color: #F7D812;
+    --accenting-color: #FCFF96;
+    --shadow: rgba(0, 0, 0, .65);
+}
+*{
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: Karla, Helvetica, monospace;
+}
 
 /* Header */
+header {
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    top: 0;
+    background-color: var(--primary-color);
+    padding: 25px 30px;
+
+}
+header h1 {
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+header a {
+    text-shadow: 0 0 15px var(--shadow);
+}
+header h1 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+header nav {
+    margin: 7px 0;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a{
+    padding: 10px 20px;
+    font-weight: lighter;
+    font-size: 1.75vw;
+    color: var(--accenting-color);
+    text-decoration: none;
+}
+/* Header Pseudo-Classes */
+header h1 a:hover{
+    color: var(--accenting-color);
+}
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+/*Hero*/
 
 /* About Me */
 
@@ -10,7 +71,24 @@
 
 /* Resized Screens */
 @media screen and (max-width: 980px) {
-
+    /*Header980*/
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        width: 100%;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    
 }
 @media screen and (max-width: 768px) {
 
