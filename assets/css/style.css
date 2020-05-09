@@ -4,6 +4,7 @@
     --secondary-color: #F7D812;
     --accenting-color: #FCFF96;
     --shadow: rgba(0, 0, 0, .65);
+    --black: #000000;
 }
 *{
     margin:0;
@@ -12,7 +13,16 @@
 body {
     font-family: Karla, Helvetica, monospace;
 }
-
+.section-title {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: solid 5px var(--black);
+    text-shadow: 0 0 15px var(--shadow);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.40vw;
+}
 /* Header */
 header {
     z-index: 9999;
@@ -62,7 +72,25 @@ header nav ul li a:hover {
     color: var(--secondary-color);
 }
 /*Hero*/
+.hero {
+    background-image: url(../images/red-fox.png);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 400px;
+    position: relative;
+}
+#hero-title {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: auto;
 
+}
 /* About Me */
 
 /* My Work */
@@ -71,6 +99,8 @@ header nav ul li a:hover {
 
 /* Resized Screens */
 @media screen and (max-width: 980px) {
+    /*Over Arching Rules 980*/
+
     /*Header980*/
     header {
         padding-bottom: 0;
@@ -88,7 +118,11 @@ header nav ul li a:hover {
     header nav ul li a {
         font-size: 20px;
     }
-    
+    /*Hero980*/
+    .hero {
+        height: 200px;
+    }
+   
 }
 @media screen and (max-width: 768px) {
 
