@@ -97,35 +97,71 @@ header nav ul li a:hover {
 
 }
 /* About Me */
-.about-drake {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
 .about-drake h2 {
     width: 20%;
     margin: 20px;
     font-size: 20px;
 }
+.drake-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 .about-drake p {
     flex: 1;
     line-height: 1.5;
     width: 80%;
-    margin: auto;
+    margin: 20px;
+    display: flex;
 }
-.drake-info img {
-    height: 200px;
-    width: 200px;
+.self-center {
+    align-self: left;
+    margin: 20px;
+    border: 5px solid var(--black);
+    display: flex;
 }
 /* My Work */
-
+.work {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 5px solid var(--black);
+}
+.work-grid {
+    display: grid;
+    background-color: var(--accenting-color);
+    width: 80%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid var(--secondary-color);
+    color: var(--black);
+    font-size: 1.2rem;
+    
+}
+.grid-item {
+    border: 5px solid black;
+    margin:20px;
+    
+}
+.item-1 {
+    
+}
+.work h2 {
+    width: 20%;
+    margin: 20px;
+    font-size: 20px;
+}
 /* Contact Me */
 
 /* Resized Screens */
 @media screen and (max-width: 980px) {
     /*Over Arching Rules 980*/
-
+    img {
+        width: 150px;
+        height: 150px;
+    }
     /*Header980*/
     header {
         padding-bottom: 0;
