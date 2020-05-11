@@ -5,6 +5,7 @@
     --accenting-color: #FCFF96;
     --shadow: rgba(0, 0, 0, .65);
     --black: #000000;
+    --teal: #afe2f9;
 }
 *{
     margin:0;
@@ -12,9 +13,7 @@
 }
 body {
     font-family: Karla, Helvetica, monospace;
-
-    
-
+    background-color: var(--teal);
 }
 .section-title {
     background-color: var(--primary-color);
@@ -25,6 +24,16 @@ body {
     margin: auto;
     padding: 10px;
     font-size: 1.40vw;
+}
+.section-title-2 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--shadow);
+    text-align: center;
+    margin: auto;
+    font-size: 1.40vw;
+    background-size:contain;
+    padding: 6px;
 }
 /* Header */
 header {
@@ -97,15 +106,15 @@ header nav ul li a:hover {
 
 }
 /* About Me */
+.about-drake {
+    margin: 0;
+    border-bottom: 5px solir var(--black);
+    background-color: var(--teal);
+}
 .about-drake h2 {
     width: 20%;
     margin: 20px;
     font-size: 20px;
-}
-.drake-info {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
 }
 .about-drake p {
     flex: 1;
@@ -113,6 +122,11 @@ header nav ul li a:hover {
     width: 80%;
     margin: 20px;
     display: flex;
+}
+.drake-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 .self-center {
     align-self: left;
@@ -125,8 +139,15 @@ header nav ul li a:hover {
     position: static;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     border-bottom: 5px solid var(--black);
+    margin-top: 20px;
+}
+.work h2 {
+    align-items: left;
+    width: 20%;
+    margin: 40px 20px;
+    font-size: 20px;
 }
 .work-grid {
     display: grid;
@@ -135,33 +156,56 @@ header nav ul li a:hover {
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    border: 2px solid var(--secondary-color);
+    border: 2px solid var(--black);
     color: var(--black);
     font-size: 1.2rem;
+    margin-bottom: 40px;
+    margin-left: 20px;
     
 }
 .grid-item {
     border: 5px solid black;
     margin:20px;
-    
+}
+.grid-item img {
+    display: flex;
 }
 .item-1 {
     grid-row: span 2;
     grid-column: span 2;
 }
-.work h2 {
+#thicc-boi {
+    padding: 29px;
+}
+
+/* Contact Me */
+.drake-contacts {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--accenting-color);
+    padding-bottom: 20px;
+}
+.drake-contacts h2 {
     width: 20%;
     margin: 20px;
     font-size: 20px;
 }
-/* Contact Me */
+.contacts address {
+    font-size: 1.4vw;
+}
+.contacts a {
+    color: var(--primary-color);
+    padding: 20px;
 
+}
 /* Resized Screens */
 @media screen and (max-width: 980px) {
     /*Over Arching Rules 980*/
-    img {
-        width: 150px;
+    .self-center {
         height: 150px;
+        width: 150px;
     }
     /*Header980*/
     header {
