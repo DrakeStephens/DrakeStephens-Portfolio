@@ -1,16 +1,234 @@
 /* Over Arching Rules */
-
+:root {
+    --primary-color: #B51F48;
+    --secondary-color: #F7D812;
+    --accenting-color: #FCFF96;
+    --shadow: rgba(0, 0, 0, .65);
+    --black: #000000;
+    --teal: #afe2f9;
+}
+*{
+    margin:0;
+    padding: 0;
+}
+body {
+    font-family: Karla, Helvetica, monospace;
+    background-color: var(--teal);
+}
+.section-title {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: solid 5px var(--black);
+    text-shadow: 0 0 15px var(--shadow);
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+    font-size: 1.40vw;
+}
+.section-title-2 {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-shadow: 0 0 15px var(--shadow);
+    text-align: center;
+    margin: auto;
+    font-size: 1.40vw;
+    background-size:contain;
+    padding: 6px;
+}
 /* Header */
+header {
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    top: 0;
+    background-color: var(--primary-color);
+    padding: 25px 30px;
 
+}
+header h1 {
+    font-weight: bold;
+    font-size: 35px;
+    margin: 0;
+}
+header a {
+    text-shadow: 0 0 15px var(--shadow);
+}
+header h1 a {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+header nav {
+    margin: 7px 0;
+}
+header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+header nav ul li a{
+    padding: 10px 20px;
+    font-weight: lighter;
+    font-size: 1.75vw;
+    color: var(--accenting-color);
+    text-decoration: none;
+}
+/* Header Pseudo-Classes */
+header h1 a:hover{
+    color: var(--accenting-color);
+}
+header nav ul li a:hover {
+    color: var(--secondary-color);
+}
+/*Hero*/
+.hero {
+    background-image: url(../images/red-fox.png);
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    height: 400px;
+    position: relative;
+    border-bottom: 5px solid var(--black);
+}
+#hero-title {
+    position: absolute;
+    top: auto;
+    bottom: 10px;
+    left: 10px;
+    right: auto;
+    font-size: 1.4vw;
+
+}
 /* About Me */
-
+.about-drake {
+    margin: 0;
+    border-bottom: 5px solir var(--black);
+    background-color: var(--teal);
+}
+.about-drake h2 {
+    width: 20%;
+    margin: 20px;
+    font-size: 20px;
+}
+.about-drake p {
+    flex: 1;
+    line-height: 1.5;
+    width: 80%;
+    margin: 20px;
+    display: flex;
+}
+.drake-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.self-center {
+    align-self: left;
+    margin: 20px;
+    border: 5px solid var(--black);
+    display: flex;
+}
 /* My Work */
+.work {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 5px solid var(--black);
+    margin-top: 20px;
+}
+.work h2 {
+    align-items: left;
+    width: 20%;
+    margin: 40px 20px;
+    font-size: 20px;
+}
+.work-grid {
+    display: grid;
+    background-color: var(--accenting-color);
+    width: 80%;
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid var(--black);
+    color: var(--black);
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    
+}
+.grid-item {
+    border: 5px solid black;
+    margin:20px;
+}
+.grid-item img {
+    display: flex;
+}
+.item-1 {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+#thicc-boi {
+    padding: 29px;
+}
 
 /* Contact Me */
+.drake-contacts {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--accenting-color);
+    padding-bottom: 20px;
+}
+.drake-contacts h2 {
+    width: 20%;
+    margin: 20px;
+    font-size: 20px;
+}
+.contacts address {
+    font-size: 1.4vw;
+}
+.contacts a {
+    color: var(--primary-color);
+    padding: 20px;
 
+}
 /* Resized Screens */
 @media screen and (max-width: 980px) {
-
+    /*Over Arching Rules 980*/
+    .self-center {
+        height: 150px;
+        width: 150px;
+    }
+    /*Header980*/
+    header {
+        padding-bottom: 0;
+        justify-content: center;
+        position: relative;
+    }
+    header h1 {
+        font-size: 25px;
+        width: 100%;
+        text-align: center;
+    }
+    header nav ul {
+        width: 100%;
+    }
+    header nav ul li a {
+        font-size: 20px;
+    }
+    /*Hero980*/
+    .hero {
+        height: 200px;
+    }
+   
 }
 @media screen and (max-width: 768px) {
 
