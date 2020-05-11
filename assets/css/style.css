@@ -89,12 +89,12 @@ header nav ul li a:hover {
     background-size: contain;
     background-position: center;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
-    align-items: flex-start;
     height: 400px;
     position: relative;
     border-bottom: 5px solid var(--black);
+    flex-direction: row;
 }
 #hero-title {
     position: absolute;
@@ -103,7 +103,17 @@ header nav ul li a:hover {
     left: 10px;
     right: auto;
     font-size: 40px;
+    
 
+}
+#my-photo {
+    position: absolute;
+    display: block;
+    top: 20px;
+    bottom: auto;
+    left: auto;
+    right: 20px;
+   
 }
 /* About Me */
 .about-drake {
@@ -114,7 +124,7 @@ header nav ul li a:hover {
 .about-drake h2 {
     width: 20%;
     margin: 20px;
-    font-size: 40px;
+    font-size: 30px;
 }
 .about-drake p {
     flex: 1;
@@ -128,12 +138,7 @@ header nav ul li a:hover {
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.self-center {
-    align-self: left;
-    margin: 20px;
-    border: 5px solid var(--black);
-    display: flex;
-}
+
 /* My Work */
 .work {
     position: static;
@@ -233,11 +238,6 @@ header nav ul li a:hover {
     header nav ul li a {
         font-size: 20px;
     }
-    /*Hero980*/
-    .hero {
-        height: 200px;
-    }
-   
 }
 @media screen and (max-width: 768px) {
 
